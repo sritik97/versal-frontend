@@ -7,7 +7,7 @@ function Signup() {
    let Navigate = useNavigate()
     const heandlSubmit = async(e)=>{
         e.preventDefault();
-        const response = fetch("http://localhost:5000/api/creatuser",{
+        const response = fetch(`${import.meta.env.MERN_MONGO_URL}/api/creatuser`,{
             method:'POST',
             headers:{
              'Content-Type':'application/json'  

@@ -6,7 +6,7 @@ function Login() {
       const heandlSubmit = async(e)=>{
           e.preventDefault();
           console.log(JSON.stringify({email:Credentials.email,password:Credentials.password}))
-          const response = fetch("http://localhost:5000/api/loginuser",{
+          const response = fetch(`${import.meta.env.MERN_MONGO_URL}/api/loginuser`,{
               method:'POST',
               headers:{
                'Content-Type':'application/json'  

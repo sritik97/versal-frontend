@@ -13,7 +13,7 @@ const [fooditem,setfooditem] = useState([]);
 
    const loadData = async(e)=>{
          
-          let  response = await fetch("http://localhost:5000/api/foodData",{
+          let  response = await fetch(`${import.meta.env.MERN_MONGO_URL}/api/foodData`,{
               method:'POST',
               headers:{
                'Content-Type':'application/json'  
